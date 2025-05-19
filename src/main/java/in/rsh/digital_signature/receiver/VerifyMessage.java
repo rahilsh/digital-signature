@@ -19,7 +19,7 @@ public class VerifyMessage {
         ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename));
         this.list = (List<byte[]>) in.readObject();
         in.close();
-        System.out.println(verifySignature(list.getFirst(), list.get(1), keyFile) ? "VERIFIED MESSAGE" + "\n----------------\n" + new String(list.getFirst()) : "Could not verify the signature.");
+        System.out.println(verifySignature(list.getFirst(), list.get(1), keyFile) ? "VERIFIED MESSAGE" + "\n-----------------\n" + new String(list.getFirst()) : "Could not verify the signature.");
     }
 
     public static void main(String[] args) throws Exception {
